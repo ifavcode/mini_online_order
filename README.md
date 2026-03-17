@@ -8,24 +8,53 @@
       <img src="https://img.shields.io/badge/MIT%202.0-D22128?logo=apache&logoColor=white" alt="License" />
     </p>
     <p>
-      <a href="#-快速开始"><strong>🚀 快速开始</strong></a>
+    <p>
+        助力每个人拥有自己的下单平台！
+    </p>
+      <a href="#🚀 快速开始"><strong>🚀 快速开始</strong></a>
       &nbsp;&middot;&nbsp;
       <span>🌐 在线体验</span>
       <a href="https://www.guetzjb.cn/mini-order-front"><strong>前台</strong></a>
       <a href="https://www.guetzjb.cn/mini-order-front"><strong>后台</strong></a>
       &nbsp;&middot;&nbsp;
-      <a href="#-功能特性"><strong>✨ 功能特性</strong></a>
+      <a href="#✨ 功能特性"><strong>✨ 功能特性</strong></a>
       &nbsp;&middot;&nbsp;
     </p>
 </div>
 
+## 📑 目录
+
+- [功能特性](#✨ 功能特性)
+- [技术栈](#🛠 技术栈)
+- [快速开始](#🚀 快速开始)
+  - [本地运行](#本地运行)
+  - [部署到服务器](#部署到服务器)
+- [说明](#说明)
+- [License](#📄 License)
+
 **体验完整内容需运行小程序**
 
-此模板已接入微信支付（没有商户号可以在后台关闭支付功能）
+项目已接入微信支付（没有商户号可以在后台关闭支付功能）
+
+## ✨ 功能特性
 
 🎮 **可自定义的商家信息**
 
 支持自定义**店铺名称**、**下单文字说明**、**店铺头像**、**店铺背景图片**、**店铺描述**、**营业时间**、**商家定位**
+
+🔔 **实时订单**
+
+后台在线用户实时接收小程序的订单
+
+**桌号二维码生成**
+
+实时生成、更新桌号二维码
+
+**商家动态**
+
+发布店铺的实时情况~
+
+...其他基础功能
 
 ## 🛠 技术栈
 
@@ -75,6 +104,7 @@ wx:
 后端`application.yml`
 
 ```yaml
+# 用于静态资源存储
 server-config:
   ip: # 服务器IP
   port: 22 # SSH端口号
@@ -85,7 +115,7 @@ server-config:
 
 ## 🚀 快速开始
 
-## 本地运行
+### 本地运行
 
 确保下面的工具在你的电脑上已经安装
 
@@ -145,7 +175,7 @@ server-config:
 
   按照要求配上即可——thing6对应{{thing6.DATA}}其他同理
 
-## 部署到服务器
+### 部署到服务器
 
 1、online-ordering-front
 
@@ -223,6 +253,12 @@ nohup ./bin/mqproxy -n YOUR_IP:9876 &
 
 请根据情况修改
 
+
+
+
+
+
+
 <img src=".\img\1.png" style="zoom:33%;" />
 
 <img src=".\img\2.png" style="zoom:33%;" />
@@ -244,7 +280,9 @@ nohup ./bin/mqproxy -n YOUR_IP:9876 &
 [MIT]([MIT License](https://mit-license.org/)) &copy; 2026 ifavcode
 
 <div align="center">
-  <br/>
+  <p>
+  	如果本项目对你有帮助，欢迎star~
+  </p>
   <a href="https://github.com/ifavcode">GitHub</a>
   &nbsp;&middot;&nbsp;
   <span>🌐 在线体验</span>

@@ -1,0 +1,23 @@
+.clear-button {
+  @apply after:border-none;
+}
+
+.tl-tr-rounded-lg {
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  overflow: hidden !important;
+  background-clip: padding-box !important;
+}
+
+.iconfont {
+  font-family: "iconfont";
+}
+
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';
+  /* Project id 5102593 */
+  src: url('//at.alicdn.com/t/c/font_5102593_pfg1qxx02ok.woff2?t=1769135759886') format('woff2'),
+    url('//at.alicdn.com/t/c/font_5102593_pfg1qxx02ok.woff?t=1769135759886') format('woff'),
+    url('//at.alicdn.com/t/c/font_5102593_pfg1qxx02ok.ttf?t=1769135759886') format('truetype');
+}

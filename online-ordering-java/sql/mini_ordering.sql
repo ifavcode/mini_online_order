@@ -11,7 +11,7 @@
  Target Server Version : 80037 (8.0.37)
  File Encoding         : 65001
 
- Date: 04/03/2026 12:57:32
+ Date: 17/03/2026 13:57:30
 */
 
 SET NAMES utf8mb4;
@@ -31,7 +31,7 @@ CREATE TABLE `address`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `FKrbi6ij3u9oy8qrwyb2r0q3v09`(`user_id` ASC) USING BTREE,
   CONSTRAINT `FKrbi6ij3u9oy8qrwyb2r0q3v09` FOREIGN KEY (`user_id`) REFERENCES `sys_user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of address
@@ -121,7 +121,7 @@ CREATE TABLE `order_item`  (
   INDEX `FKati1k6nilkh8m762nn3736kea`(`goods_id` ASC) USING BTREE,
   CONSTRAINT `FKati1k6nilkh8m762nn3736kea` FOREIGN KEY (`goods_id`) REFERENCES `goods` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKt4dc2r9nbvbujrljv3e23iibt` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 234 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 238 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of order_item
@@ -130,6 +130,10 @@ INSERT INTO `order_item` VALUES (230, 105, 138, 0.20, 0.20, '[]', 1);
 INSERT INTO `order_item` VALUES (231, 104, 139, 0.10, 0.10, '[{\"id\": 20, \"name\": \"配置\", \"goods\": {\"id\": 104, \"name\": \"企业官网网站模板\", \"stock\": -1, \"imgUrl\": \"https://www.guetzjb.cn/assets_other/2026-03-04/banner1.feb6ce29.jpg\", \"status\": 1, \"hasSpec\": 1, \"category\": {\"id\": 1, \"name\": \"🏆 推荐\", \"createdAt\": \"2026-01-08 11:34:13\", \"sortOrder\": 1}, \"basePrice\": 0.1, \"createdAt\": \"2026-03-04 10:03:57\", \"sortOrder\": 1, \"updatedAt\": \"2026-03-04T12:47:42.387789\", \"categoryId\": 1, \"description\": \"两个版本，一个带后台，一个不带后台\"}, \"goodsId\": 104, \"sortOrder\": 1, \"specItems\": [{\"id\": 28, \"name\": \"不带后台\", \"stock\": -1, \"status\": 1, \"sortOrder\": 1, \"extraPrice\": 0}], \"selectType\": \"one\"}]', 1);
 INSERT INTO `order_item` VALUES (232, 104, 140, 0.10, 0.10, '[{\"id\": 20, \"name\": \"配置\", \"goods\": {\"id\": 104, \"name\": \"企业官网网站模板\", \"stock\": -1, \"imgUrl\": \"https://www.guetzjb.cn/assets_other/2026-03-04/banner1.feb6ce29.jpg\", \"status\": 1, \"hasSpec\": 1, \"category\": {\"id\": 1, \"name\": \"🏆 推荐\", \"createdAt\": \"2026-01-08 11:34:13\", \"sortOrder\": 1}, \"basePrice\": 0.1, \"createdAt\": \"2026-03-04 10:03:57\", \"sortOrder\": 1, \"updatedAt\": \"2026-03-04T12:47:42.387789\", \"categoryId\": 1, \"description\": \"两个版本，一个带后台，一个不带后台\"}, \"goodsId\": 104, \"sortOrder\": 1, \"specItems\": [{\"id\": 28, \"name\": \"不带后台\", \"stock\": -1, \"status\": 1, \"sortOrder\": 1, \"extraPrice\": 0}], \"selectType\": \"one\"}]', 1);
 INSERT INTO `order_item` VALUES (233, 104, 141, 0.10, 0.10, '[{\"id\": 20, \"name\": \"配置\", \"goods\": {\"id\": 104, \"name\": \"企业官网网站模板\", \"stock\": -1, \"imgUrl\": \"https://www.guetzjb.cn/assets_other/2026-03-04/banner1.feb6ce29.jpg\", \"status\": 1, \"hasSpec\": 1, \"category\": {\"id\": 1, \"name\": \"🏆 推荐\", \"createdAt\": \"2026-01-08 11:34:13\", \"sortOrder\": 1}, \"basePrice\": 0.1, \"createdAt\": \"2026-03-04 10:03:57\", \"sortOrder\": 1, \"updatedAt\": \"2026-03-04T12:47:42.387789\", \"categoryId\": 1, \"description\": \"两个版本，一个带后台，一个不带后台\"}, \"goodsId\": 104, \"sortOrder\": 1, \"specItems\": [{\"id\": 28, \"name\": \"不带后台\", \"stock\": -1, \"status\": 1, \"sortOrder\": 1, \"extraPrice\": 0}], \"selectType\": \"one\"}]', 2);
+INSERT INTO `order_item` VALUES (234, 105, 142, 0.20, 0.20, '[]', 1);
+INSERT INTO `order_item` VALUES (235, 105, 143, 0.20, 0.20, '[]', 1);
+INSERT INTO `order_item` VALUES (236, 105, 144, 0.20, 0.20, '[]', 1);
+INSERT INTO `order_item` VALUES (237, 105, 145, 0.20, 0.20, '[]', 1);
 
 -- ----------------------------
 -- Table structure for orders
@@ -154,7 +158,7 @@ CREATE TABLE `orders`  (
   INDEX `FKa6ffsu1w47sjotgectd8wkcw6`(`user_id` ASC) USING BTREE,
   CONSTRAINT `FK2x8p3n1c0ubla95xwx0dt5pak` FOREIGN KEY (`table_id`) REFERENCES `table_info` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `FKa6ffsu1w47sjotgectd8wkcw6` FOREIGN KEY (`user_id`) REFERENCES `sys_user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 142 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 146 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of orders
@@ -163,6 +167,10 @@ INSERT INTO `orders` VALUES (138, '2026-03-04 12:48:13.981350', '0001', 2, 0.20,
 INSERT INTO `orders` VALUES (139, '2026-03-04 12:49:01.231247', '0002', 2, 0.10, NULL, '', 'dinein', '立刻制作', '13136592050', 5, '76474b27d8214aee876292d14e9e133a', NULL);
 INSERT INTO `orders` VALUES (140, '2026-03-04 12:55:45.996905', '0003', 2, 0.10, NULL, '', 'dinein', '立刻制作', '13136592050', 5, '514aab48fcb34b6ca13cf73a244b581a', NULL);
 INSERT INTO `orders` VALUES (141, '2026-03-04 12:56:07.776529', '0004', 1, 0.20, NULL, '', 'dinein', '立刻制作', '13136592050', 5, '7d60f76f35534c6fb60039bc94a93750', NULL);
+INSERT INTO `orders` VALUES (142, '2026-03-11 15:35:31.036051', '0001', 3, 0.20, NULL, '', 'dinein', '立刻开始', '13136592050', 5, '79ae4e66bc044732a609bcabbabdb98a', NULL);
+INSERT INTO `orders` VALUES (143, '2026-03-11 15:44:13.523406', '0002', 1, 0.20, NULL, '', 'dinein', '立刻开始', '13136592050', 5, '9f5ebac9923d4c8a8d5e8538afc3e283', NULL);
+INSERT INTO `orders` VALUES (144, '2026-03-11 15:44:24.910145', '0003', 1, 0.20, NULL, '', 'dinein', '立刻开始', '13136592050', 5, '2a06dd87d0494ab1ad36e04f5d3fb10e', NULL);
+INSERT INTO `orders` VALUES (145, '2026-03-11 15:48:30.586124', '0004', 1, 0.20, NULL, '', 'dinein', '立刻开始', '', 5, 'f55b441e5392412fbf3462db3f959a9f', NULL);
 
 -- ----------------------------
 -- Table structure for refund_record
@@ -257,8 +265,8 @@ INSERT INTO `sys_dict` VALUES (5, NULL, 'choose_lng_lat', '{\"lat\":30.290408,\"
 INSERT INTO `sys_dict` VALUES (6, NULL, 'shop_image', 'https://www.guetzjb.cn/assets_other/2026-01-16/lologo.jpg');
 INSERT INTO `sys_dict` VALUES (7, NULL, 'shop_phone', '13136592050');
 INSERT INTO `sys_dict` VALUES (8, NULL, 'shop_bg_image', 'https://www.guetzjb.cn/assets_other/2026-03-04/R-C.jpg');
-INSERT INTO `sys_dict` VALUES (9, NULL, 'pay_switch', '1');
-INSERT INTO `sys_dict` VALUES (11, NULL, 'order_tip', '1');
+INSERT INTO `sys_dict` VALUES (9, NULL, 'pay_switch', '0');
+INSERT INTO `sys_dict` VALUES (11, NULL, 'order_tip', '0');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -295,7 +303,6 @@ INSERT INTO `sys_menu` VALUES (10, 'business_dynamic/index', '2026-01-22 17:34:0
 INSERT INTO `sys_menu` VALUES (11, NULL, '2026-02-12 14:59:05.774000', NULL, b'0', 'cib:wechat', '微信支付', 7, 0, '微信支付', '/wechat');
 INSERT INTO `sys_menu` VALUES (12, 'wechat/query', '2026-02-12 15:00:12.738000', NULL, b'0', 'cib:wechat', '商户订单号查询订单', 1, 11, '商户订单号查询订单', '/wechat/query');
 INSERT INTO `sys_menu` VALUES (13, 'wechat/refund', '2026-02-25 15:22:27.662000', NULL, b'0', 'cib:wechat', '退款记录', 2, 11, '退款记录', '/wechat/refund');
-INSERT INTO `sys_menu` VALUES (14, 'update/index', '2026-02-27 14:19:05.108000', NULL, b'0', 'material-symbols:event-note', '更新日志', 8, 0, '更新日志', '/update/index');
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -325,7 +332,7 @@ INSERT INTO `sys_user` VALUES (1, NULL, '2026-02-25 15:13:41.000000', '0', NULL,
 INSERT INTO `sys_user` VALUES (2, NULL, '2026-01-15 13:56:04.042515', '0', NULL, '未命名用户', NULL, '', NULL, NULL, '1', NULL, 'otZBr5MeUH4O6zySFU6kM9qSRxLc');
 INSERT INTO `sys_user` VALUES (3, 'https://avatars.githubusercontent.com/u/83257074', '2025-12-05 15:59:02.000000', '0', '1308003218@qq.com', 'biu', '$2a$10$s5vDkytJjx5rO.Zpm1stKe/QOUuEqC/tr8DiecJ2jdaC53TsZdH36', '*', '13333333333', '1', '1', 'admin', NULL);
 INSERT INTO `sys_user` VALUES (4, NULL, '2026-01-19 21:43:36.511509', '0', NULL, '未命名用户', NULL, '', NULL, NULL, '1', NULL, 'otZBr5JO5KgNrVkd81PV68YX9DF0');
-INSERT INTO `sys_user` VALUES (5, 'https://wx.qlogo.cn/mmhead/zsUXYY6y4cKMtXcxs4PFicvriayD87E3XuX9RKtoibICHkP3IOzS910Uic86tEbL8jk5lZanJcJBZrs/0', '2026-02-11 16:50:53.041132', '0', NULL, 'emme', NULL, '', '13136592050', NULL, '1', NULL, 'oy-5B3X_4gZIo1IaY9EBewqDGCJ4');
+INSERT INTO `sys_user` VALUES (5, 'https://wx.qlogo.cn/mmhead/zsUXYY6y4cKMtXcxs4PFicvriayD87E3XuX9RKtoibICHkP3IOzS910Uic86tEbL8jk5lZanJcJBZrs/0', '2026-02-11 16:50:53.041132', '0', NULL, 'emme', '$2a$10$s5vDkytJjx5rO.Zpm1stKe/QOUuEqC/tr8DiecJ2jdaC53TsZdH36', '', '13136592050', NULL, '1', 'emme', 'oy-5B3X_4gZIo1IaY9EBewqDGCJ4');
 
 -- ----------------------------
 -- Table structure for table_info

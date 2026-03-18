@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 rocketmq:
-  name-server: 8.141.115.249:9876
+  name-server: 127.0.0.1:9876
   producer:
     group: order-producer-group    # 生产者组名
     send-message-timeout: 30000  # 发送消息超时时间(毫秒)

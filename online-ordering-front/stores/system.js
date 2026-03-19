@@ -21,6 +21,8 @@ export const useSystemStore = defineStore("system", () => {
         console.error("初始化系统配置出错");
       },
     });
+    const accountInfo = uni.getAccountInfoSync();
+    appId.value = accountInfo.miniProgram.appId
     initBusiness();
     initOtherConfig()
   }

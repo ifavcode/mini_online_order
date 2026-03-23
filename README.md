@@ -87,8 +87,8 @@ VITE_TMPL_ID=4HNjqvQ6ZWAMleu9uIpiZ2EfNwSU_l6iTt4oqAvqSKI # 订单完成模板ID
 wx:
   miniapp:
     configs:
-      - appid: wx8b6c29b5771b5c6c #微信小程序的appid
-        secret: eeea6b2dd5e07127a6e9e514879b7685 #微信小程序的Secret
+      - appid:  #微信小程序的appid
+        secret:  #微信小程序的Secret
         token: #微信小程序消息服务器配置的token
         aesKey: #微信小程序消息服务器配置的EncodingAESKey
         msgDataFormat: JSON

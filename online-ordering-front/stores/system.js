@@ -1,7 +1,9 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 import { getBusinessInfo, leftLikeDicts } from "../api/dict";
+import { getEnvType } from "../utils";
 
+const env = getEnvType()
 
 export const useSystemStore = defineStore("system", () => {
   const systemInfo = ref({});
@@ -21,8 +23,10 @@ export const useSystemStore = defineStore("system", () => {
         console.error("初始化系统配置出错");
       },
     });
-    const accountInfo = uni.getAccountInfoSync();
-    appId.value = accountInfo.miniProgram.appId
+    if (env !== 'h5') {
+      const accountInfo = uni.getAccountInfoSync();
+      appId.value = accountInfo.miniProgram.appId
+    }
     initBusiness();
     initOtherConfig()
   }

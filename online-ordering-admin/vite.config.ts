@@ -9,7 +9,9 @@ import {
   __APP_INFO__
 } from "./build/utils";
 
-const baseUrl = "http://127.0.0.1:9988";
+// const baseUrl = "http://127.0.0.1:9988";
+// const baseUrl = "https://www.guetzjb.cn/mini_order";
+const baseUrl = "http://8.141.115.249:9988";
 
 export default ({ mode }: ConfigEnv): UserConfigExport => {
   const { VITE_CDN, VITE_PORT, VITE_COMPRESSION, VITE_PUBLIC_PATH } =

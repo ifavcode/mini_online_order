@@ -21,10 +21,10 @@ wx:
         aesKey: #微信小程序消息服务器配置的EncodingAESKey
         msgDataFormat: JSON
   pay:
-    appId:
-    mchId:  # 商户ID
-    mchKey:  # 商户Key
-    keyPath: /cert/apiclient_cert.p12 # 商户证书
+    appId: wx8b6c29b5771b5c6c
+    mchId: 1739262069 # 商户ID
+    mchKey: 8e9f27d48a7b9c8d7e6f5a4b3c2d1e0f # 商户Key
+    keyPath: D:/7855扫描下载/WXCertUtil/cert/apiclient_cert.p12 # 商户证书
     notifyUrl: http://m98e8c66.natappfree.cc/wx/pay/notify # 支付回调
     refund-notify-url: http://m98e8c66.natappfree.cc/wx/pay/refund/notify # 退款回调
     tradeType: JSAPI

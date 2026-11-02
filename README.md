@@ -13,10 +13,6 @@
     </p>
       <a href="#🚀 快速开始"><strong>🚀 快速开始</strong></a>
       &nbsp;&middot;&nbsp;
-      <span>🌐 在线体验</span>
-      <a href="https://www.guetzjb.cn/mini-order-front"><strong>前台</strong></a>
-      <a href="https://www.guetzjb.cn/mini-order-admin"><strong>后台</strong></a>
-      &nbsp;&middot;&nbsp;
       <a href="#✨ 功能特性"><strong>✨ 功能特性</strong></a>
       &nbsp;&middot;&nbsp;
     </p>
